@@ -26,7 +26,6 @@ console.log(f1(5)); // 1728
 const f2 = pipe(inc, inc);
 console.log(f2(7)); // 9
 
-// const f3 = pipe(inc, 7, cube); // throws immediately
 
 //'---------------------------------------------------------------------------------'
 
@@ -51,7 +50,6 @@ function composeSafe(...fns) {
       }
       return value;
     } catch (err) {
-      // notify listeners, ignore their own errors
       for (const handler of listeners.error) {
         try {
           handler(err);
@@ -92,4 +90,4 @@ safeWithError.on('error', e => {
   console.log('Second handler:', e.message);
 });
 
-console.log(safeWithError(5)); // undefined, error handlers called
+console.log(safeWithError(5));
