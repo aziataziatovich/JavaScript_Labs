@@ -1,4 +1,4 @@
-// 1. removeElement(array, item)
+// 1. 
 function removeElement(array, item) {
   const index = array.indexOf(item);
   if (index !== -1) {
@@ -6,17 +6,17 @@ function removeElement(array, item) {
   }
 }
 
-// 2. removeElements(array, item1, ...itemN)
+// 2. 
 function removeElements(array, ...items) {
   items.forEach(item => removeElement(array, item));
 }
 
-// 3. unique(array)
+// 3. 
 function unique(array) {
   return array.filter((value, index) => array.indexOf(value) === index);
 }
 
-// 4. difference(array1, array2)
+// 4. 
 function difference(array1, array2) {
   return array1.filter(item => !array2.includes(item));
 }

@@ -1,4 +1,4 @@
-// 1. pipe: left-to-right composition
+// 1.
 function pipe(...fns) {
   if (!fns.length) {
     throw new Error('pipe requires at least one function');
@@ -29,7 +29,7 @@ console.log(f2(7)); // 9
 
 //'---------------------------------------------------------------------------------'
 
-// 2. Right-to-left composition with error suppression
+// 2.
 function composeSafe(...fns) {
   const list = fns.slice().reverse();
 
